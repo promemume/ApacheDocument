@@ -146,25 +146,18 @@ sudo service apache2 start
       <dd>确保您已经在您的系统中安装了 APR 和 APR-Util. 如果您还没有或者您不喜欢系统自带的版本, 
       请从 <a href="http://apr.apache.org/">Apache APR</a> 处下载最新版的 APR 和 APR-Util 并将其解压至 <code>/httpd_source_tree_root/srclib/apr</code> 和 <code>/httpd_source_tree_root/srclib/apr-util</code>
       (确保目录名称不含版本号. 例如, APR distribution 必须在 /httpd_source_tree_root/srclib/apr/ 下) 并在
-      <code>./configure</code> 中附加 <code>--with-included-apr</code>
-      On some platforms, you may have to install the
-      corresponding <code>-dev</code> packages to allow httpd to build
-      against your installed copy of APR and APR-Util.</dd>
+      <code>./configure</code> 中附加 <code>--with-included-apr</code> 选项
+      在其他平台上，您可能需要安装对应的<code>-dev</code> 版本的软件包来让 APR 和 APR-Util 构建针对您安装的程序。</dd>
 
-      <dt>Perl-Compatible Regular Expressions Library (PCRE)</dt>
-      <dd>This library is required but not longer bundled with httpd.
-      Download the source code from <a href="http://www.pcre.org/">http://www.pcre.org</a>,
-      or install a Port or Package.  If your build system can't find
-      the pcre-config script installed by the PCRE build, point to it
-      using the <code>--with-pcre</code> parameter.  On some platforms,
-      you may have to install the corresponding <code>-dev</code>
-      package to allow httpd to build against your installed copy
-      of PCRE.</dd>
+      <dt>兼容Perl的正则表达式库 (PCRE)</dt>
+      <dd>PCRE 是 Httpd 的依赖库，但目前而言 PCRE 并不与 Httpd 捆绑安装。
+      您可以从<a href="http://www.pcre.org/">http://www.pcre.org</a>处下载 PCRE 的源代码或安装对应的软件包.  
+      如果您的 build 功能无法找到由 PCRE 构建并安装的 pcre-config script 的话， 对指令附加 <code>--with-pcre</code> 选项.  
+      在一些平台，您可能需要安装对应的 <code>-dev</code>
+      版本包来让 Httpd 安装它。</dd>
 
-      <dt>Disk Space</dt>
-      <dd>Make sure you have at least 50 MB of temporary free disk
-      space available. After installation the server occupies
-      approximately 10 MB of disk space. The actual disk space
+      <dt>磁盘空间</dt>
+      <dd>确保您有至少 50MB 的空闲空间. 安装后可能会占用服务器约 10MB 的空间. The actual disk space
       requirements will vary considerably based on your chosen
       configuration options, any third-party modules, and, of course,
       the size of the web site or sites that you have on the server.</dd>
